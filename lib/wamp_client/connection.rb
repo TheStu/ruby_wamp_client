@@ -98,10 +98,10 @@ module WampClient
       @retry_timer = 1
       @retrying = false
 
-      EM.run do
+      # EM.run do # handled in instatiation by the developer, to allow for EM callbacks to be added
         # Create the transport
         self._create_transport
-      end
+      # end
 
     end
 
